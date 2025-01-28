@@ -1,0 +1,919 @@
+<stix:STIX_Package xmlns:DomainNameObj="http://cybox.mitre.org/objects#DomainNameObject-1" xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1" xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:incident="http://stix.mitre.org/Incident-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:ta="http://stix.mitre.org/ThreatActor-1" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:alienvault-otx="https://otx.alienvault.com" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:taxii="http://taxii.mitre.org/messages/taxii_xml_binding-1" xmlns:taxii_11="http://taxii.mitre.org/messages/taxii_xml_binding-1.1" xmlns:tdq="http://taxii.mitre.org/query/taxii_default_query-1" id="alienvault-otx:Package-af2578a8-252a-4fae-9090-72e8df59ecb0" version="1.2">
+    <stix:STIX_Header>
+        <stix:Title>Phishing Email with Malicious Attachment</stix:Title>
+        <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators</stix:Package_Intent>
+        <stix:Description>A Finance team member received a phishing email from the sender postmaster@yunpiaoer[.]com 
+The first email had no attachments and was written in very good English. The second email had a password-protected file attached.
+Upon opening the file and looking at the documents, Malware was caught by Antivirus.</stix:Description>
+        <stix:Short_Description>https://otx.alienvault.com/pulse/6501d41eb12732b5907b807f</stix:Short_Description>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>//node() | //@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type="simpleMarking:SimpleMarkingStructureType">
+                    <simpleMarking:Statement>alienvault-otx-tags: </simpleMarking:Statement>
+                </marking:Marking_Structure>
+            </marking:Marking>
+        </stix:Handling>
+        <stix:Information_Source>
+            <stixCommon:Description>Alienvault OTX - https://otx.alienvault.com/</stixCommon:Description>
+            <stixCommon:Identity>
+                <stixCommon:Name>Alienvault OTX</stixCommon:Name>
+            </stixCommon:Identity>
+            <stixCommon:Time>
+                <cyboxCommon:Produced_Time>2023-09-13T15:26:59.402000</cyboxCommon:Produced_Time>
+            </stixCommon:Time>
+            <stixCommon:References>
+                <stixCommon:Reference/>
+            </stixCommon:References>
+        </stix:Information_Source>
+    </stix:STIX_Header>
+    <stix:Indicators>
+        <stix:Indicator id="alienvault-otx:indicator-4ba7a7d8-94b6-c2e1-cb04-c0586acae6f8" timestamp="2023-09-13T15:24:15" xsi:type="indicator:IndicatorType">
+            <indicator:Title>40eadd6dc9ad9b73b253d26e66c3bd68abb1a27f44d9d8eae6c9217375671193 from https://otx.alienvault.com/pulse/6501d41eb12732b5907b807f</indicator:Title>
+            <indicator:Description>Malware sent to a finance department by an unsolicited Phishing email that used typo swatting to impersonate a legitimate (although defunct) domain.</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-4ba7a7d8-94b6-c2e1-cb04-c0586acae6f8">
+                <cybox:Title>FileHash-SHA256 - 40eadd6dc9ad9b73b253d26e66c3bd68abb1a27f44d9d8eae6c9217375671193</cybox:Title>
+                <cybox:Object id="alienvault-otx:File-58438ed6-41f4-4bc2-800d-6c8269439c3e">
+                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                        <FileObj:Hashes>
+                            <cyboxCommon:Hash>
+                                <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA256</cyboxCommon:Type>
+                                <cyboxCommon:Simple_Hash_Value>40eadd6dc9ad9b73b253d26e66c3bd68abb1a27f44d9d8eae6c9217375671193</cyboxCommon:Simple_Hash_Value>
+                            </cyboxCommon:Hash>
+                        </FileObj:Hashes>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-509abed1-c9c8-1ae9-59da-9bf8e3f8529f" timestamp="2023-09-13T15:24:15" xsi:type="indicator:IndicatorType">
+            <indicator:Title>yunpiaoer.com from https://otx.alienvault.com/pulse/6501d41eb12732b5907b807f</indicator:Title>
+            <indicator:Description>Phishing email with Malware sent from this domain</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-509abed1-c9c8-1ae9-59da-9bf8e3f8529f">
+                <cybox:Title>domain - yunpiaoer.com</cybox:Title>
+                <cybox:Object id="alienvault-otx:DomainName-1b355ed6-44ed-4eea-8ba9-37b6f40b37ae">
+                    <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType" type="FQDN">
+                        <DomainNameObj:Value>yunpiaoer.com</DomainNameObj:Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-1367899f-6ca8-9d7c-4c14-bf15fc7c375d" timestamp="2023-09-13T15:26:59" xsi:type="indicator:IndicatorType">
+            <indicator:Title>Outstanding Invoice.pdf from https://otx.alienvault.com/pulse/6501d41eb12732b5907b807f</indicator:Title>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:Incidents>
+        <stix:Incident id="alienvault-otx:incident-5b8ed4ff-81a2-41c8-98fd-9035bd7b22d2" timestamp="2023-12-13T11:00:09.876449+00:00" xsi:type="incident:IncidentType">
+            <incident:Description>A Finance team member received a phishing email from the sender postmaster@yunpiaoer[.]com 
+The first email had no attachments and was written in very good English. The second email had a password-protected file attached.
+Upon opening the file and looking at the documents, Malware was caught by Antivirus.</incident:Description>
+        </stix:Incident>
+    </stix:Incidents>
+    <stix:Threat_Actors>
+        <stix:Threat_Actor id="alienvault-otx:threatactor-55bd3f43-43c1-4a04-8304-a4b8582fe895" timestamp="2023-12-13T11:00:09.876319+00:00" xsi:type="ta:ThreatActorType">
+            <ta:Title>Unknown</ta:Title>
+        </stix:Threat_Actor>
+    </stix:Threat_Actors>
+</stix:STIX_Package>
+    
+<stix:STIX_Package xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2" xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:incident="http://stix.mitre.org/Incident-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:alienvault-otx="https://otx.alienvault.com" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:taxii="http://taxii.mitre.org/messages/taxii_xml_binding-1" xmlns:taxii_11="http://taxii.mitre.org/messages/taxii_xml_binding-1.1" xmlns:tdq="http://taxii.mitre.org/query/taxii_default_query-1" id="alienvault-otx:Package-602ea0b7-cd41-4699-8b9c-1793db4aa02c" version="1.2">
+    <stix:STIX_Header>
+        <stix:Title>Password Spraying attack against Microsoft 365</stix:Title>
+        <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators</stix:Package_Intent>
+        <stix:Description>List of IP addresses that were using password attacks against 365 accounts</stix:Description>
+        <stix:Short_Description>https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</stix:Short_Description>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>//node() | //@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type="simpleMarking:SimpleMarkingStructureType">
+                    <simpleMarking:Statement>alienvault-otx-tags: </simpleMarking:Statement>
+                </marking:Marking_Structure>
+            </marking:Marking>
+        </stix:Handling>
+        <stix:Information_Source>
+            <stixCommon:Description>Alienvault OTX - https://otx.alienvault.com/</stixCommon:Description>
+            <stixCommon:Identity>
+                <stixCommon:Name>Alienvault OTX</stixCommon:Name>
+            </stixCommon:Identity>
+            <stixCommon:Time>
+                <cyboxCommon:Produced_Time>2023-11-17T07:05:05.544000</cyboxCommon:Produced_Time>
+            </stixCommon:Time>
+            <stixCommon:References>
+                <stixCommon:Reference>Password Spraying attack against Microsoft 365</stixCommon:Reference>
+            </stixCommon:References>
+        </stix:Information_Source>
+    </stix:STIX_Header>
+    <stix:Indicators>
+        <stix:Indicator id="alienvault-otx:indicator-7ec53cab-f6bc-bf92-6192-b9e8fcbfd825" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>159.20.120.64 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=ES ASN=AS39155 Jetnet Wimax S.A</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-7ec53cab-f6bc-bf92-6192-b9e8fcbfd825">
+                <cybox:Title>IPv4 - 159.20.120.64</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-b88ea6df-870a-4412-b5af-513648a23024">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>159.20.120.64</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-2cb5e4ac-5c0d-bd10-7ef6-777ee63933fb" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>188.126.89.84 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=FI ASN=AS42708 GleSYS AB</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-2cb5e4ac-5c0d-bd10-7ef6-777ee63933fb">
+                <cybox:Title>IPv4 - 188.126.89.84</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-b583f369-1396-4ff0-95e3-cffdd53502f7">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>188.126.89.84</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-13bef341-cf59-925c-0842-715267570856" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>38.132.155.158 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS23118 SKYBEST</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-13bef341-cf59-925c-0842-715267570856">
+                <cybox:Title>IPv4 - 38.132.155.158</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-493fa44d-14cf-4462-9f27-f2ff90792ae6">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>38.132.155.158</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-09b39ba6-ad9e-9ea4-e974-607b74cd7666" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>103.53.219.117 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=AU ASN=AS203020 HostRoyale Technologies Pvt Ltd</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-09b39ba6-ad9e-9ea4-e974-607b74cd7666">
+                <cybox:Title>IPv4 - 103.53.219.117</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-8d371b05-865a-4395-ac23-15e43f9e0741">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>103.53.219.117</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-d8774cea-09b4-0bee-4dbd-b20928662948" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>105.158.206.83 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=MA ASN=AS36903 MT-MPLS</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-d8774cea-09b4-0bee-4dbd-b20928662948">
+                <cybox:Title>IPv4 - 105.158.206.83</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-cf197c65-67c6-45f9-a4eb-31719cbadb53">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>105.158.206.83</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-2fb9ab02-f410-aaee-f294-2f6ce6f8d4f8" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>109.250.209.11 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=DE ASN=AS8881 1&amp;1 Versatel Deutschland GmbH</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-2fb9ab02-f410-aaee-f294-2f6ce6f8d4f8">
+                <cybox:Title>IPv4 - 109.250.209.11</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-2da019a9-c612-4770-a42a-9fb856ce182c">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>109.250.209.11</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-99523700-f814-a112-7766-4f783efce266" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>128.230.215.148 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS11872 SYRACUSE-UNIVERSITY</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-99523700-f814-a112-7766-4f783efce266">
+                <cybox:Title>IPv4 - 128.230.215.148</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-02d12f81-8c6b-4ffa-9bf3-abf923404705">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>128.230.215.148</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-e9e2664c-bd21-8245-7987-087e69f75ba3" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>138.199.42.210 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS212238 Datacamp Limited</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-e9e2664c-bd21-8245-7987-087e69f75ba3">
+                <cybox:Title>IPv4 - 138.199.42.210</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-521a1adb-1d72-459e-8a0d-d0656d8ae8da">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>138.199.42.210</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-637c61e7-e559-d8ba-d979-1748beb25759" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>149.34.252.80 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=DE ASN=AS212238 Datacamp Limited</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-637c61e7-e559-d8ba-d979-1748beb25759">
+                <cybox:Title>IPv4 - 149.34.252.80</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-53d675fa-b3f4-4ee9-ad12-8da6dcc6c3ba">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>149.34.252.80</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-c68beaad-2b9b-46a0-420a-6bcbfce41ce3" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>166.1.237.253 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=DE ASN=AS62240 Clouvider Limited</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-c68beaad-2b9b-46a0-420a-6bcbfce41ce3">
+                <cybox:Title>IPv4 - 166.1.237.253</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-214df622-af90-4219-a570-f3698211fcab">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>166.1.237.253</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-70138d56-f901-57f2-b38f-c87746f6d724" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>172.102.218.127 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=AU ASN=AS149428 Code200, UAB</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-70138d56-f901-57f2-b38f-c87746f6d724">
+                <cybox:Title>IPv4 - 172.102.218.127</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-6d288f95-a4cf-4b5e-b8d4-814c86478965">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>172.102.218.127</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-fcf45696-3496-a6ee-3c00-88173e8a7099" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>172.172.162.157 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS8075 MICROSOFT-CORP-MSN-AS-BLOCK</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-fcf45696-3496-a6ee-3c00-88173e8a7099">
+                <cybox:Title>IPv4 - 172.172.162.157</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-5835d5cd-aaba-4d6a-9cc5-18951fad113e">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>172.172.162.157</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-b50a9f62-a50e-3e6c-ad81-c5a689d90fc3" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>172.92.16.86 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS54858 AS-SBI</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-b50a9f62-a50e-3e6c-ad81-c5a689d90fc3">
+                <cybox:Title>IPv4 - 172.92.16.86</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-846a7358-36ce-4bb3-9778-3fe2c0680a3f">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>172.92.16.86</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-7deb808d-c1f3-2670-9486-290ab77ced81" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>173.239.224.79 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS396356 LATITUDE-SH</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-7deb808d-c1f3-2670-9486-290ab77ced81">
+                <cybox:Title>IPv4 - 173.239.224.79</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-31085e40-7f02-4454-afca-f7540e9a8f54">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>173.239.224.79</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-b0201f1e-bcd0-e687-d9c2-5633c366f230" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>184.170.242.196 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS46562 PERFORMIVE</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-b0201f1e-bcd0-e687-d9c2-5633c366f230">
+                <cybox:Title>IPv4 - 184.170.242.196</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-a64fba31-f0c7-4197-b2d0-279235d3175a">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>184.170.242.196</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-3c55731c-d046-f0a4-f9ec-3b62eed2382b" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>185.238.89.55 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=DE ASN=AS62240 Clouvider Limited</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-3c55731c-d046-f0a4-f9ec-3b62eed2382b">
+                <cybox:Title>IPv4 - 185.238.89.55</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-be1fc6dd-ae12-405a-a1ba-dcc3093a3f90">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>185.238.89.55</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-411f4439-6f7e-f6c4-1ca2-75b7b9af0869" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>185.87.104.3 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=NL ASN=AS57112 F2X Operator B.V.</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-411f4439-6f7e-f6c4-1ca2-75b7b9af0869">
+                <cybox:Title>IPv4 - 185.87.104.3</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-e52a9566-0527-4527-9121-03253b2628b0">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>185.87.104.3</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-251e1c6e-713e-dee3-4230-3667bf4afb1a" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>185.87.159.132 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=NL ASN=AS57112 F2X Operator B.V.</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-251e1c6e-713e-dee3-4230-3667bf4afb1a">
+                <cybox:Title>IPv4 - 185.87.159.132</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-b94222ec-a562-4e84-bfdb-c7e454815780">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>185.87.159.132</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-94a677a6-f4fb-b4db-afb0-ec9d1445fe67" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>185.92.210.43 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=PT ASN=AS203020 HostRoyale Technologies Pvt Ltd</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-94a677a6-f4fb-b4db-afb0-ec9d1445fe67">
+                <cybox:Title>IPv4 - 185.92.210.43</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-fbde7ce4-215d-464b-9927-bc3e457e1731">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>185.92.210.43</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-6122f09c-9434-b102-82f3-56d25e2d4445" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>2.58.124.7 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=DE ASN=AS44477 Stark Industries Solutions Ltd</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-6122f09c-9434-b102-82f3-56d25e2d4445">
+                <cybox:Title>IPv4 - 2.58.124.7</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-215e37a1-cadd-4415-be17-c8eacbbcb47f">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>2.58.124.7</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-bd470fb7-438e-54ba-988a-5b875c6e87c1" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>20.205.102.54 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=HK ASN=AS8075 MICROSOFT-CORP-MSN-AS-BLOCK</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-bd470fb7-438e-54ba-988a-5b875c6e87c1">
+                <cybox:Title>IPv4 - 20.205.102.54</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-d12352f3-464b-4dde-ab92-6f60ab817710">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>20.205.102.54</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-3f884e92-48e4-81da-3cd9-1709566e68fd" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>20.24.64.46 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=HK ASN=AS8075 MICROSOFT-CORP-MSN-AS-BLOCK</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-3f884e92-48e4-81da-3cd9-1709566e68fd">
+                <cybox:Title>IPv4 - 20.24.64.46</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-a43da1c2-42aa-4afa-a916-b2b9994dd60b">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>20.24.64.46</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-f330b276-2a54-2741-a920-f8d95c75bce7" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>20.255.48.71 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=HK ASN=AS8075 MICROSOFT-CORP-MSN-AS-BLOCK</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-f330b276-2a54-2741-a920-f8d95c75bce7">
+                <cybox:Title>IPv4 - 20.255.48.71</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-d7e476f2-d788-4caf-9d0d-e330edd78a65">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>20.255.48.71</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-3528dcb2-3ce4-a4c0-b8b6-a75e999b0f14" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>209.20.203.110 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS1239 SPRINTLINK</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-3528dcb2-3ce4-a4c0-b8b6-a75e999b0f14">
+                <cybox:Title>IPv4 - 209.20.203.110</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-cd05381f-e5c8-4407-9d75-9699e21a40db">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>209.20.203.110</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-abe57f71-96da-3c24-9abf-8e9a703df9c4" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>209.99.135.222 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=CA ASN=AS203999 Geekyworks IT Solutions Pvt Ltd</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-abe57f71-96da-3c24-9abf-8e9a703df9c4">
+                <cybox:Title>IPv4 - 209.99.135.222</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-5cab19bf-362b-49fd-82a8-a4e3dbbfcdab">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>209.99.135.222</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-0982ec02-f78e-59d3-794a-e232b5427bf6" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>212.25.190.4 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=IT ASN=AS12637 SEEWEB s.r.l.</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-0982ec02-f78e-59d3-794a-e232b5427bf6">
+                <cybox:Title>IPv4 - 212.25.190.4</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-f1d002b0-1406-4d24-b095-395a8bfee54f">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>212.25.190.4</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-824f0814-e0f2-d17f-2665-e8441fc80465" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>212.90.120.34 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS51167 Contabo GmbH</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-824f0814-e0f2-d17f-2665-e8441fc80465">
+                <cybox:Title>IPv4 - 212.90.120.34</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-9960074e-25df-4f38-8290-e7d949ae65e4">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>212.90.120.34</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-f3301bd5-6d0f-3c8b-9489-f83ff2e6e532" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>212.98.122.91 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=DK ASN=AS42525 GlobalConnect A/S</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-f3301bd5-6d0f-3c8b-9489-f83ff2e6e532">
+                <cybox:Title>IPv4 - 212.98.122.91</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-aa1f215d-c180-42dc-8123-8fdb47c8bf1c">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>212.98.122.91</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-ac388f6f-3140-1cff-5a43-6a24cfe1f1f1" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>24.49.31.113 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS4922 SHENTEL</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-ac388f6f-3140-1cff-5a43-6a24cfe1f1f1">
+                <cybox:Title>IPv4 - 24.49.31.113</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-47d4a457-21a9-4be6-ad31-aa4d26ca2540">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>24.49.31.113</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-1542dc15-0c3c-6ab1-9705-b269ca871fdf" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>4.206.193.248 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=CA ASN=AS8075 MICROSOFT-CORP-MSN-AS-BLOCK</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-1542dc15-0c3c-6ab1-9705-b269ca871fdf">
+                <cybox:Title>IPv4 - 4.206.193.248</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-202692c6-c719-4236-830c-6c8b9ed8a4e6">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>4.206.193.248</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-5c5bb824-2c31-84a3-9024-70091ee27c0f" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>45.43.167.100 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS205659 UAB code200</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-5c5bb824-2c31-84a3-9024-70091ee27c0f">
+                <cybox:Title>IPv4 - 45.43.167.100</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-dc046b6d-4370-4fe9-b6bf-25588472972d">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>45.43.167.100</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-2ae541da-15e8-c47a-fdf2-659ba0c0d966" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>46.183.222.10 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=LV ASN=AS52048 DataClub S.A.</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-2ae541da-15e8-c47a-fdf2-659ba0c0d966">
+                <cybox:Title>IPv4 - 46.183.222.10</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-21602f1a-b4a0-4577-8677-a5d23c24f7a9">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>46.183.222.10</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-a43dae65-c236-46fb-9a8e-3bc5a796798d" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>50.116.18.242 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS63949 Akamai Connected Cloud</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-a43dae65-c236-46fb-9a8e-3bc5a796798d">
+                <cybox:Title>IPv4 - 50.116.18.242</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-e45d13b3-9489-4fc4-b198-b703b8aca66c">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>50.116.18.242</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-71c086e0-ca7b-ca73-82b1-2e7acf04c007" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>50.7.177.235 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=NL ASN=AS174 COGENT-174</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-71c086e0-ca7b-ca73-82b1-2e7acf04c007">
+                <cybox:Title>IPv4 - 50.7.177.235</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-5c2dbd56-7dcf-4a3a-a044-e952f6710906">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>50.7.177.235</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-cd75d817-64d4-d1dc-78f7-a446d8709c40" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>51.116.120.204 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=DE ASN=AS8075 MICROSOFT-CORP-MSN-AS-BLOCK</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-cd75d817-64d4-d1dc-78f7-a446d8709c40">
+                <cybox:Title>IPv4 - 51.116.120.204</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-21a77c56-5614-48d9-b8b4-036e95629435">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>51.116.120.204</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-0be42984-b952-4025-de1d-2ccbec9ab114" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>52.146.5.28 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS8075 MICROSOFT-CORP-MSN-AS-BLOCK</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-0be42984-b952-4025-de1d-2ccbec9ab114">
+                <cybox:Title>IPv4 - 52.146.5.28</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-a6fd0080-55bd-4c7b-9909-1c0880d75f3e">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>52.146.5.28</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-34fdf819-4bbe-adbc-227a-539a17517d28" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>57.128.106.15 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=FR ASN=AS16276 OVH SAS</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-34fdf819-4bbe-adbc-227a-539a17517d28">
+                <cybox:Title>IPv4 - 57.128.106.15</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-1d33b998-ee9d-4e00-a404-770fb0146f5f">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>57.128.106.15</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-21c2f91c-c2a7-cff8-e601-3c4629932c16" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>64.20.132.252 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS22646 HARCOM1</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-21c2f91c-c2a7-cff8-e601-3c4629932c16">
+                <cybox:Title>IPv4 - 64.20.132.252</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-616037a6-fc92-4371-8957-ca16e223e980">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>64.20.132.252</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-75d1ef62-321d-66b3-aa8e-41880d55e343" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>69.5.124.176 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS33604 BTNETWORK</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-75d1ef62-321d-66b3-aa8e-41880d55e343">
+                <cybox:Title>IPv4 - 69.5.124.176</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-ba621b02-cee9-459a-ab62-07827d860ca9">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>69.5.124.176</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-b9c07224-89c8-77df-b82d-5d45c23fbdc8" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>69.58.12.70 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS55286 SERVER-MANIA</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-b9c07224-89c8-77df-b82d-5d45c23fbdc8">
+                <cybox:Title>IPv4 - 69.58.12.70</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-17a35b4a-bfe4-4eaf-bdf3-c4fc9e1a4fe3">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>69.58.12.70</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-7cb2962c-fd1e-0618-81b6-07ac41da8566" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>69.59.93.14 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS40285 NORTHLAND-CABLE</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-7cb2962c-fd1e-0618-81b6-07ac41da8566">
+                <cybox:Title>IPv4 - 69.59.93.14</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-2a4d3c31-6634-4ea6-b1b4-80292e7db0a7">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>69.59.93.14</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-29bf7a88-2364-2e99-d2dc-b25157511da6" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>69.62.224.170 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS14051 SUREWEST</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-29bf7a88-2364-2e99-d2dc-b25157511da6">
+                <cybox:Title>IPv4 - 69.62.224.170</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-a773582c-9106-426f-8e3a-333519a80a0a">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>69.62.224.170</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-59234435-1479-8965-9309-49dcd204deb1" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>71.42.85.131 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS11427 TWC-11427-TEXAS</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-59234435-1479-8965-9309-49dcd204deb1">
+                <cybox:Title>IPv4 - 71.42.85.131</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-e1dfa7ee-c53c-4faa-bc8c-0f24e8fa5af5">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>71.42.85.131</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-c92654e7-cd1a-81e6-2791-7c8438be8854" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>74.234.176.4 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=NL ASN=AS8075 MICROSOFT-CORP-MSN-AS-BLOCK</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-c92654e7-cd1a-81e6-2791-7c8438be8854">
+                <cybox:Title>IPv4 - 74.234.176.4</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-ac30560f-0ef4-4f6a-bba8-a2fe8494a165">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>74.234.176.4</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-a43c2dcc-de1b-6fa0-da37-634030a86015" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>82.86.8.145 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=ES ASN=AS39738 Telecom Castilla La Mancha SA</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-a43c2dcc-de1b-6fa0-da37-634030a86015">
+                <cybox:Title>IPv4 - 82.86.8.145</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-95b075de-05fb-4b36-8fd3-8939695037a2">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>82.86.8.145</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-5478aa2d-8a20-88de-92aa-34803f9df4f1" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>91.139.222.61 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=BG ASN=AS43205 Bulsatcom EOOD</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-5478aa2d-8a20-88de-92aa-34803f9df4f1">
+                <cybox:Title>IPv4 - 91.139.222.61</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-79e4e32a-ed37-421a-a0a2-b0a2f370c421">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>91.139.222.61</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-38522a5a-1e73-f633-c1b9-2abe91d70fbe" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>91.146.28.161 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=RU ASN=AS3226 OOO NI</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-38522a5a-1e73-f633-c1b9-2abe91d70fbe">
+                <cybox:Title>IPv4 - 91.146.28.161</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-f687cebd-28bc-4f95-80d2-77c18d154044">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>91.146.28.161</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-b3b47b20-c482-fa88-40b7-db1456a9a206" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>91.198.77.175 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=NL ASN=AS211895 Serverius Holding B.V.</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-b3b47b20-c482-fa88-40b7-db1456a9a206">
+                <cybox:Title>IPv4 - 91.198.77.175</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-840da4cf-5185-49ba-9253-3de67a49464e">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>91.198.77.175</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-8e2c8b09-dcc1-e43d-6ad4-519a6cb01909" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>91.75.74.154 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=AE ASN=AS15802 Emirates Integrated Telecommunications Company PJSC</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-8e2c8b09-dcc1-e43d-6ad4-519a6cb01909">
+                <cybox:Title>IPv4 - 91.75.74.154</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-0487a8f9-cd78-4aa3-aaba-f85940ef9dea">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>91.75.74.154</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-3e9e2b2c-b614-739b-e2cf-a95323503144" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>94.131.64.44 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=GI ASN=AS3257 GTT Communications Inc.</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-3e9e2b2c-b614-739b-e2cf-a95323503144">
+                <cybox:Title>IPv4 - 94.131.64.44</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-a58e343c-5d1b-4e65-85b6-35081810b196">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>94.131.64.44</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-77364751-2a8e-7a55-10e6-4a7ddc29d0a3" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>94.158.190.66 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=RU ASN=AS35048 Biterika Group LLC</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-77364751-2a8e-7a55-10e6-4a7ddc29d0a3">
+                <cybox:Title>IPv4 - 94.158.190.66</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-1f082d1f-6944-4ff2-ad9a-16ba93ff7895">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>94.158.190.66</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-29c5d5e9-8ab1-f5e6-a3ed-06be98b10569" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>96.57.199.170 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS6128 CABLE-NET-1</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-29c5d5e9-8ab1-f5e6-a3ed-06be98b10569">
+                <cybox:Title>IPv4 - 96.57.199.170</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-6c025728-2726-44c3-9282-411df22e569e">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>96.57.199.170</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-13828ef3-3eda-057c-b0ff-62854f76f7f2" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>96.74.238.9 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS7922 COMCAST-7922</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-13828ef3-3eda-057c-b0ff-62854f76f7f2">
+                <cybox:Title>IPv4 - 96.74.238.9</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-7cd65c02-b750-404f-9c5f-18c9eccc52f5">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>96.74.238.9</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-02d973e4-19c0-429c-35bb-64a70925bddc" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>98.162.25.7 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS22773 ASN-CXA-ALL-CCI-22773-RDC</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-02d973e4-19c0-429c-35bb-64a70925bddc">
+                <cybox:Title>IPv4 - 98.162.25.7</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-9f753010-14d8-456a-93ed-3c34563a6bae">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>98.162.25.7</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-c7b20561-5bea-1b86-2e52-1de8843bb17e" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>98.67.162.28 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=DE ASN=AS8075 MICROSOFT-CORP-MSN-AS-BLOCK</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-c7b20561-5bea-1b86-2e52-1de8843bb17e">
+                <cybox:Title>IPv4 - 98.67.162.28</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-db8d6198-516a-43c8-a2b4-1a63237cac3b">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>98.67.162.28</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-704b7e07-a1ac-769f-9ecc-51605c1f303a" timestamp="2023-10-18T07:00:29" xsi:type="indicator:IndicatorType">
+            <indicator:Title>99.184.195.108 from https://otx.alienvault.com/pulse/652f828c49e77b12bd1f6dab</indicator:Title>
+            <indicator:Description>CC=US ASN=AS7018 ATT-INTERNET4</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-704b7e07-a1ac-769f-9ecc-51605c1f303a">
+                <cybox:Title>IPv4 - 99.184.195.108</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-2070c795-e4bf-4ef7-a41d-649a5ab5e2ee">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>99.184.195.108</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:Incidents>
+        <stix:Incident id="alienvault-otx:incident-d84c725c-f343-4b89-b71f-0a1f54507fe8" timestamp="2023-12-13T11:00:09.894454+00:00" xsi:type="incident:IncidentType">
+            <incident:Description>List of IP addresses that were using password attacks against 365 accounts</incident:Description>
+        </stix:Incident>
+    </stix:Incidents>
+</stix:STIX_Package>
+    
+<stix:STIX_Package xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2" xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:incident="http://stix.mitre.org/Incident-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:alienvault-otx="https://otx.alienvault.com" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:taxii="http://taxii.mitre.org/messages/taxii_xml_binding-1" xmlns:taxii_11="http://taxii.mitre.org/messages/taxii_xml_binding-1.1" xmlns:tdq="http://taxii.mitre.org/query/taxii_default_query-1" id="alienvault-otx:Package-1fe03501-580b-44e9-a0f7-4a607fd09a0c" version="1.2">
+    <stix:STIX_Header>
+        <stix:Title>Impersonation OneDrive, reCAPTURE web URLs</stix:Title>
+        <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators</stix:Package_Intent>
+        <stix:Description>These URLs lead to the official Microsoft login page but are most likely using a reverse proxy such as Eviljinx to capture MFA session token.</stix:Description>
+        <stix:Short_Description>https://otx.alienvault.com/pulse/654e46d7130a4291bcdd604b</stix:Short_Description>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>//node() | //@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type="simpleMarking:SimpleMarkingStructureType">
+                    <simpleMarking:Statement>alienvault-otx-tags: </simpleMarking:Statement>
+                </marking:Marking_Structure>
+            </marking:Marking>
+        </stix:Handling>
+        <stix:Information_Source>
+            <stixCommon:Description>Alienvault OTX - https://otx.alienvault.com/</stixCommon:Description>
+            <stixCommon:Identity>
+                <stixCommon:Name>Alienvault OTX</stixCommon:Name>
+            </stixCommon:Identity>
+            <stixCommon:Time>
+                <cyboxCommon:Produced_Time>2023-11-10T15:05:59.864000</cyboxCommon:Produced_Time>
+            </stixCommon:Time>
+            <stixCommon:References>
+                <stixCommon:Reference/>
+            </stixCommon:References>
+        </stix:Information_Source>
+    </stix:STIX_Header>
+    <stix:Indicators>
+        <stix:Indicator id="alienvault-otx:indicator-7adc0f2b-50d6-5f56-7660-cedc84da8cd9" timestamp="2023-11-10T15:06:00" xsi:type="indicator:IndicatorType">
+            <indicator:Title>https://app.funnel-preview.com/for_domain/michael01cc64.clickfunnels.com/optin1697450815635?updated_at=242339af135de71f6f7f5e0936f8dd23v2&amp;track=0&amp;preview=true from https://otx.alienvault.com/pulse/654e46d7130a4291bcdd604b</indicator:Title>
+            <indicator:Description>This is a link to a click funnel website that is set up to look like a OneDrive file share.</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-7adc0f2b-50d6-5f56-7660-cedc84da8cd9">
+                <cybox:Title>URL - https://app.funnel-preview.com/for_domain/michael01cc64.clickfunnels.com/optin1697450815635?updated_at=242339af135de71f6f7f5e0936f8dd23v2&amp;track=0&amp;preview=true</cybox:Title>
+                <cybox:Object id="alienvault-otx:URI-278855ac-d3aa-482a-b6a0-f54c8a918e91">
+                    <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                        <URIObj:Value>https://app.funnel-preview.com/for_domain/michael01cc64.clickfunnels.com/optin1697450815635?updated_at=242339af135de71f6f7f5e0936f8dd23v2&amp;track=0&amp;preview=true</URIObj:Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-2682f9e5-c6fb-500b-5c31-264366cf8a31" timestamp="2023-11-10T15:06:00" xsi:type="indicator:IndicatorType">
+            <indicator:Title>https://0nline.infrmantee.cfd/?kqdH=X6Yrg8 from https://otx.alienvault.com/pulse/654e46d7130a4291bcdd604b</indicator:Title>
+            <indicator:Description>This web page is a false reCAPTURE site used for Phishing</indicator:Description>
+            <indicator:Observable id="alienvault-otx:Observable-2682f9e5-c6fb-500b-5c31-264366cf8a31">
+                <cybox:Title>URL - https://0nline.infrmantee.cfd/?kqdH=X6Yrg8</cybox:Title>
+                <cybox:Object id="alienvault-otx:URI-39d76ee5-60ca-4c58-9a9d-ea09ea7160f8">
+                    <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                        <URIObj:Value>https://0nline.infrmantee.cfd/?kqdH=X6Yrg8</URIObj:Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:Incidents>
+        <stix:Incident id="alienvault-otx:incident-d88ad84f-2a7e-43d9-8451-09214e66aa85" timestamp="2023-12-13T11:00:09.938355+00:00" xsi:type="incident:IncidentType">
+            <incident:Description>These URLs lead to the official Microsoft login page but are most likely using a reverse proxy such as Eviljinx to capture MFA session token.</incident:Description>
+            <incident:Victim id="alienvault-otx:country-8bdc3188-fbbc-f1a1-4e7d-8b9d5c6d0eea">
+                <stixCommon:Name>Country: United Kingdom of Great Britain and Northern Ireland</stixCommon:Name>
+            </incident:Victim>
+        </stix:Incident>
+    </stix:Incidents>
+</stix:STIX_Package>
+    
+<stix:STIX_Package xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2" xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2" xmlns:simpleMarking="http://data-marking.mitre.org/extensions/MarkingStructure#Simple-1" xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1" xmlns:cybox="http://cybox.mitre.org/cybox-2" xmlns:marking="http://data-marking.mitre.org/Marking-1" xmlns:incident="http://stix.mitre.org/Incident-1" xmlns:indicator="http://stix.mitre.org/Indicator-2" xmlns:cyboxCommon="http://cybox.mitre.org/common-2" xmlns:stix="http://stix.mitre.org/stix-1" xmlns:stixCommon="http://stix.mitre.org/common-1" xmlns:alienvault-otx="https://otx.alienvault.com" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:taxii="http://taxii.mitre.org/messages/taxii_xml_binding-1" xmlns:taxii_11="http://taxii.mitre.org/messages/taxii_xml_binding-1.1" xmlns:tdq="http://taxii.mitre.org/query/taxii_default_query-1" id="alienvault-otx:Package-a5efd294-b7de-4981-b49a-714681aa7bcc" version="1.2">
+    <stix:STIX_Header>
+        <stix:Title>Impersonation SharePoint, MS Capture</stix:Title>
+        <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators</stix:Package_Intent>
+        <stix:Description>These URLs point towards a google docs hosted fake SharePoint site, which when logged in shows a PDF statement.</stix:Description>
+        <stix:Short_Description>https://otx.alienvault.com/pulse/654e5081ca46c92b558cde56</stix:Short_Description>
+        <stix:Handling>
+            <marking:Marking>
+                <marking:Controlled_Structure>//node() | //@*</marking:Controlled_Structure>
+                <marking:Marking_Structure xsi:type="simpleMarking:SimpleMarkingStructureType">
+                    <simpleMarking:Statement>alienvault-otx-tags: office, https, go back, feedback, correlationid</simpleMarking:Statement>
+                </marking:Marking_Structure>
+            </marking:Marking>
+        </stix:Handling>
+        <stix:Information_Source>
+            <stixCommon:Description>Alienvault OTX - https://otx.alienvault.com/</stixCommon:Description>
+            <stixCommon:Identity>
+                <stixCommon:Name>Alienvault OTX</stixCommon:Name>
+            </stixCommon:Identity>
+            <stixCommon:Time>
+                <cyboxCommon:Produced_Time>2023-11-10T15:47:12.817000</cyboxCommon:Produced_Time>
+            </stixCommon:Time>
+            <stixCommon:References>
+                <stixCommon:Reference>https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsites.google.com%2Fview%2Ft4tytgrfe%2Fhome%2Fzackenartige%2Ftellerdrehen%2Freconciled_statement-pdf&amp;data=05%7C01%7CAdrian.Hall%40changing-lives.org.uk%7C44a220bc92b4402ee9f108dbe11228df%7C5ad637eaf0284bd9b291c43830159169%7C0%7C0%7C638351240355976452%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000%7C%7C%7C&amp;sdata=TmEB%2BRK2QH9cAYeSkUnQ44QLGDmUQjHtO5npmtntHoA%3D&amp;reserved=0</stixCommon:Reference>
+            </stixCommon:References>
+        </stix:Information_Source>
+    </stix:STIX_Header>
+    <stix:Indicators>
+        <stix:Indicator id="alienvault-otx:indicator-550a047a-5caf-79f7-b10f-36feb1e5f02c" timestamp="2023-11-10T15:47:14" xsi:type="indicator:IndicatorType">
+            <indicator:Title>https://sites.google.com/view/t4tytgrfe/home/zackenartige/tellerdrehen/reconciled_statement-pdf from https://otx.alienvault.com/pulse/654e5081ca46c92b558cde56</indicator:Title>
+            <indicator:Observable id="alienvault-otx:Observable-550a047a-5caf-79f7-b10f-36feb1e5f02c">
+                <cybox:Title>URL - https://sites.google.com/view/t4tytgrfe/home/zackenartige/tellerdrehen/reconciled_statement-pdf</cybox:Title>
+                <cybox:Object id="alienvault-otx:URI-bae5e956-ec38-4581-b61f-ce95c3dc29ea">
+                    <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                        <URIObj:Value>https://sites.google.com/view/t4tytgrfe/home/zackenartige/tellerdrehen/reconciled_statement-pdf</URIObj:Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-1d336fcf-e7ae-9db1-b597-347717b25e6f" timestamp="2023-11-10T15:47:14" xsi:type="indicator:IndicatorType">
+            <indicator:Title>tickets@dap.edu.ph from https://otx.alienvault.com/pulse/654e5081ca46c92b558cde56</indicator:Title>
+            <indicator:Observable id="alienvault-otx:Observable-1d336fcf-e7ae-9db1-b597-347717b25e6f">
+                <cybox:Title>email - tickets@dap.edu.ph</cybox:Title>
+                <cybox:Object id="alienvault-otx:Address-3b1a8eba-949c-4c4e-8e3e-83ba2a22fd23">
+                    <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                        <AddressObj:Address_Value>tickets@dap.edu.ph</AddressObj:Address_Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+        <stix:Indicator id="alienvault-otx:indicator-2e2439c4-1897-5baa-adea-ff385655f299" timestamp="2023-11-10T15:47:14" xsi:type="indicator:IndicatorType">
+            <indicator:Title>https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsites.google.com%2Fview%2Ft4tytgrfe%2Fhome%2Fzackenartige%2Ftellerdrehen%2Freconciled_statement-pdf&amp;data=05%7C01%7CAdrian.Hall%40changing-lives.org.uk%7C44a220bc92b4402ee9f108dbe11228df%7C5ad637eaf0284bd9b291c43830159169%7C0%7C0%7C638351240355976452%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000%7C%7C%7C&amp;sdata=TmEB%2BRK2QH9cAYeSkUnQ44QLGDmUQjHtO5npmtntHoA%3D&amp;reserved=0 from https://otx.alienvault.com/pulse/654e5081ca46c92b558cde56</indicator:Title>
+            <indicator:Observable id="alienvault-otx:Observable-2e2439c4-1897-5baa-adea-ff385655f299">
+                <cybox:Title>URL - https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsites.google.com%2Fview%2Ft4tytgrfe%2Fhome%2Fzackenartige%2Ftellerdrehen%2Freconciled_statement-pdf&amp;data=05%7C01%7CAdrian.Hall%40changing-lives.org.uk%7C44a220bc92b4402ee9f108dbe11228df%7C5ad637eaf0284bd9b291c43830159169%7C0%7C0%7C638351240355976452%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000%7C%7C%7C&amp;sdata=TmEB%2BRK2QH9cAYeSkUnQ44QLGDmUQjHtO5npmtntHoA%3D&amp;reserved=0</cybox:Title>
+                <cybox:Object id="alienvault-otx:URI-8bc71198-c1c6-475c-919f-37fb192d4247">
+                    <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                        <URIObj:Value>https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsites.google.com%2Fview%2Ft4tytgrfe%2Fhome%2Fzackenartige%2Ftellerdrehen%2Freconciled_statement-pdf&amp;data=05%7C01%7CAdrian.Hall%40changing-lives.org.uk%7C44a220bc92b4402ee9f108dbe11228df%7C5ad637eaf0284bd9b291c43830159169%7C0%7C0%7C638351240355976452%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000%7C%7C%7C&amp;sdata=TmEB%2BRK2QH9cAYeSkUnQ44QLGDmUQjHtO5npmtntHoA%3D&amp;reserved=0</URIObj:Value>
+                    </cybox:Properties>
+                </cybox:Object>
+            </indicator:Observable>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:Incidents>
+        <stix:Incident id="alienvault-otx:incident-21d91ac6-ae46-4b28-b303-96996ca5e2a0" timestamp="2023-12-13T11:00:09.958692+00:00" xsi:type="incident:IncidentType">
+            <incident:Description>These URLs point towards a google docs hosted fake SharePoint site, which when logged in shows a PDF statement.</incident:Description>
+            <incident:Victim id="alienvault-otx:country-c3782c86-d809-9f3f-b5b7-55ebc9703225">
+                <stixCommon:Name>Country: Philippines</stixCommon:Name>
+            </incident:Victim>
+        </stix:Incident>
+    </stix:Incidents>
+</stix:STIX_Package>
