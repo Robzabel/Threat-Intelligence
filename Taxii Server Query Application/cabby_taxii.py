@@ -5,6 +5,7 @@ from cabby import create_client
 
 if __name__ == "__main__":
 
+    #Request Information from user
     domain = input("Please enter the Domain of the Taxii Server: ")
     discovery_path = input("Please enter the Discovery path of the Taxii Server: ")
     api_key = input("Please enter the API Key for authentiation if necessary, leave blank if not: ")
@@ -18,8 +19,7 @@ if __name__ == "__main__":
         client.set_auth(username=api_key, password="foo")
 
     
-    
-
+    #Return a list of services and collections to user
     print("\nBelow is a list of sevieces available on the Taxi server:")
     
     services = client.discover_services()
