@@ -1,0 +1,1 @@
+{'CrowdStrike': 'Adversaries Can “Log In with Microsoft” through the nOAuth Azure Active Directory Vulnerability', 'TheHackerNews': 'New NodeStealer Targeting Facebook Business Accounts and Crypto Wallets', 'BleepingComputer': 'Retail chain Hot Topic discloses wave of credential-stuffing attacks'}
